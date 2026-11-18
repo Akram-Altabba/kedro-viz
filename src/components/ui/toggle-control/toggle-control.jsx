@@ -16,6 +16,7 @@ export const ToggleControl = ({
   onChange,
   onToggleHoveredFocusMode,
   selected,
+  title,
   dataIconType,
 }) => {
   const handleMouseHover = (isEntering) =>
@@ -51,6 +52,7 @@ export const ToggleControl = ({
     <label
       htmlFor={id}
       className={labelClassNames}
+      title={title}
       onClick={(e) => e.stopPropagation()}
       onMouseEnter={() => handleMouseHover(true)}
       onMouseLeave={() => handleMouseHover(false)}
