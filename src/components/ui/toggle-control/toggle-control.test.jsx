@@ -11,6 +11,18 @@ describe('ToggleControl', () => {
     onToggleHoveredFocusMode: jest.fn(),
     IconComponent: DummyIcon,
   };
+  it('renders the provided tooltip title', () => {
+    const { container } = render(<ToggleControl {...baseProps} title="Hide" />);
+
+    expect(container.firstChild.getAttribute('title')).toBe('Hide');
+  });
+  it('renders the Focus tooltip title', () => {
+    const { container } = render(
+      <ToggleControl {...baseProps} title="Focus" kind="focus" />
+    );
+
+    expect(container.firstChild.getAttribute('title')).toBe('Focus');
+  });
 
   it('applies correct class for kind prop', () => {
     const kinds = ['modularPipeline', 'data', 'task'];

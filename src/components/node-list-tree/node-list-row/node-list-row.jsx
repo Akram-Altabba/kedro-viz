@@ -98,6 +98,7 @@ const NodeListRow = ({
           name={name}
           onChange={onChange}
           selected={selected}
+          title="Hide"
         />
       )}
       {FocusIcon && (
@@ -113,6 +114,7 @@ const NodeListRow = ({
           onChange={onChange}
           onToggleHoveredFocusMode={onToggleHoveredFocusMode}
           selected={selected}
+          title="Focus"
           dataIconType="focus"
         />
       )}
